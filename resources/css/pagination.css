@@ -1,0 +1,81 @@
+.table-fixed {
+    width: 100%;
+    max-width: 1200px;
+    /* Largura máxima da tabela */
+    height: 400px;
+    /* Altura fixa */
+    overflow-y: auto;
+    /* Rolagem vertical se necessário */
+    overflow-x: auto;
+    /* Rolagem horizontal se necessário */
+    border-collapse: collapse;
+    /* Remove os espaços entre as células */
+    margin: 0 auto;
+    /* Centraliza a tabela na página */
+}
+
+.table-fixed th,
+.table-fixed td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    /* Borda das células */
+}
+
+.table-fixed th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table-fixed td {
+    background-color: #f9f9f9;
+}
+
+.table-fixed tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-fixed tbody tr:hover {
+    background-color: #d1e7fd;
+}
+
+
+
+.pagination .page-link {
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    color: #007bff;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.pagination .page-item:hover .page-link {
+    transform: scale(1.1);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-color: #ddd;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Pagination container style */
+.d-flex.justify-content-center {
+    margin-top: 30px;
+}
+
+.pagination-rounded .page-link {
+    border-radius: 25px;
+}
