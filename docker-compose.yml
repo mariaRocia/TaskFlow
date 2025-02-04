@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:CJuX3lKcdn9uQtgh0L/Rrtr3AD43ZTl/GfX3VWdGQPQ=
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=taskflow
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+    command: >
+      sh -c "
+      composer install &&
+      php artisan migrate &&
+      php artisan serve --port=8000
+      "
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: taskflow
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

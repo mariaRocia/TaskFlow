@@ -19,10 +19,10 @@
                 <h4>Menu</h4>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('tarefas.index') }}">Tarefas</a>
+                        <a class="nav-link" href="{{ route('colaboradores.index') }}">Colaboradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('colaboradores.index') }}">Colaboradores</a>
+                        <a class="nav-link active" href="{{ route('tarefas.index') }}">Tarefas</a>
                     </li>
                 </ul>
             </div>
