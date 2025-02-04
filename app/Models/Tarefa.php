@@ -25,9 +25,8 @@ class Tarefa extends Model
         return Carbon::parse($value)->format('d/m/Y H:i');
     }
 
-    // Novo método para formatar a data de execução
     public function getDataExecutadaAttribute($value)
     {
-        return $value ? Carbon::parse($value)->format('d/m/Y H:i') : null;
+        return $value ? \Carbon\Carbon::parse($value)->format('d/m/Y H:i') : null;
     }
 }

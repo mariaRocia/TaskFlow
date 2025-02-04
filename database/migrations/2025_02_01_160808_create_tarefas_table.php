@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('descricao');
             $table->dateTime('prazo_limitado');
             $table->foreignId('responsavel_id')->constrained('colaboradores');
-            $table->enum('prioridade', ['Baixa', 'Média', 'Alta']);
+            $table->enum('prioridade', ['Alta', 'Média', 'Baixa']);
             $table->timestamps(); 
             $table->dateTime('data_executada')->nullable();
             $table->timestamp('data_hora_cadastro')->default(DB::raw('CURRENT_TIMESTAMP')); 

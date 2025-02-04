@@ -12,7 +12,6 @@ class Colaborador extends Model
     protected $table = 'colaboradores';
     protected $fillable = ['nome', 'cpf', 'email'];
 
-    // Desabilitar os timestamps automáticos do Laravel
     public $timestamps = false;
 
     public function tarefas()

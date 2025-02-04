@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Colaborador</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -48,7 +49,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             M.updateTextFields();
 
-            // Fechar mensagem de sucesso após 3 segundos
             setTimeout(function() {
                 let successMessage = document.getElementById("success-message");
                 if (successMessage) {
@@ -56,9 +56,8 @@
                 }
             }, 3000);
 
-            // Máscara para CPF
             document.getElementById('cpf').addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+                let value = e.target.value.replace(/\D/g, ''); 
                 if (value.length > 11) value = value.slice(0, 11);
 
                 value = value.replace(/(\d{3})(\d)/, '$1.$2');

@@ -9,7 +9,7 @@ class ColaboradorController extends Controller
 {
     public function index()
     {
-        $colaboradores = Colaborador::paginate(5); // Mostra 10 por página
+        $colaboradores = Colaborador::paginate(5); 
         return view('colaboradores.index', compact('colaboradores'));
     }
 
