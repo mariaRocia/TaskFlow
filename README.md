@@ -57,8 +57,10 @@ Generating optimized autoload files
 
 #### **Gerando a migration**
 ```sh
-INFO  Discovering packages.
+INFO  Preparing database.
 ```
+Em caso de erro na geração da migration é por conta que o banco ainda não foi criado.
+docker restart laravel_app para refazer a conexão.
 
 #### **Projeto Ativo**
 ```sh
