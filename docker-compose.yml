@@ -13,7 +13,7 @@ services:
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
-      - APP_KEY=base64:CJuX3lKcdn9uQtgh0L/Rrtr3AD43ZTl/GfX3VWdGQPQ=
+      - APP_KEY=base64:CFfu8dDf9L0nA9B20ObSvOkGa0XTdja137b6I3m601g=
       - DB_CONNECTION=mysql
       - DB_HOST=db
       - DB_PORT=3306
